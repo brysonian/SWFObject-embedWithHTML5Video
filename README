@@ -10,4 +10,4 @@ REQUIRES: SWFObject 2.2+
 SWFOBJECT: http://code.google.com/p/swfobject/
 
 
-A simple script that adds a embedVideoWithIPOS to swf object with the same argument list as embedSWF plus a final 11th argument of parameters for an HTML5 video tag for iphone. The argument should be an object with at least an mp4 property which is the path to the video file. All other properties will be used to set attributes on the video tag. 
+This is a simple script that adds a embedVideoWithIPOS to swf object with the same argument list as embedSWF plus a final 11th argument of parameters for an HTML5 video tag for iphone. The argument should be an object with at least an mp4 property which is the path to the video file. All other properties will be used to set attributes on the video tag. 
