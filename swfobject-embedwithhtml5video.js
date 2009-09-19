@@ -11,7 +11,9 @@ swfobject.embedWithHTML5Video = function(swf, id, width, height, version, expres
 			v.setAttribute('height', h);
 			for(var p in videovars) if (p != 'mp4' && p != 'width' && p != 'height') v.setAttribute(p, videovars[p]);
 			v.appendChild(document.createTextNode("Could not display video."));
-			document.getElementById(id).appendChild(v);
+			var target = document.getElementById(id);
+			while(target.hasChildNodes())target.removeChild(target.lastChild);
+			target.appendChild(v);
 		}
 		if (typeof callback == 'function') callback(e);
 	});
