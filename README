@@ -1,5 +1,5 @@
 -------------------------------
- SWFObject-embedVideoWithIPOS
+ SWFObject-embedWithHTML5Video
 -------------------------------
   Chandler McWilliams 
   http://brysonian.com
@@ -10,7 +10,7 @@ REQUIRES: SWFObject 2.2+
 SWFOBJECT: http://code.google.com/p/swfobject/
 
 DESCRIPTION:
-This is a simple script that adds a embedVideoWithIPOS to swfobject with the same argument list as embedSWF plus a final 11th argument of parameters for an HTML5 video tag for iphone. The argument should be an object with at least an mp4 property which is the path to the video file. All other properties will be used to set attributes on the video tag. 
+This is a simple script that adds a embedVideoWithIPOS to swfobject with the same argument list as embedSWF plus a final 11th argument of parameters for an HTML5 video tag (for iphone). The argument should be an object with at least an mp4 property which is the path to the video file. All other properties will be used to set attributes on the video tag. 
 
 USAGE EXAMPLE:
 
@@ -23,10 +23,10 @@ var params = {
   allowfullscreen: "true"
 };
 
-var iphonevars = {
+var videovars = {
   mp4: flashvars.file + ".mp4",
   poster: flashvars.file + ".jpg",
   controls: 'true'
 }
 
-swfobject.embedVideoWithIPOS("videoplayer.swf", "vid", "580", "460", "10.0.0", "expressInstall.swf", flashvars, params, false, false, iphonevars);
+swfobject.embedWithHTML5Video("videoplayer.swf", "vid", "580", "460", "10.0.0", "expressInstall.swf", flashvars, params, false, false, videovars);
